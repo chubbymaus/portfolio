@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
-  resources :myworks
-  
+  resources :myworks, except: [:show]
+
+  get 'mywork/:id', to: 'myworks#show', as: 'mywork_show'
 
   get 'about', to: 'pages#about'
 
