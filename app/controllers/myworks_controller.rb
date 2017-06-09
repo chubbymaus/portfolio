@@ -25,7 +25,7 @@ class MyworksController < ApplicationController
 
   def update
     @portfolio_item = Mywork.find(params[:id])
-    
+
     respond_to do |format|
       if @portfolio_item.update(params.require(:mywork).permit(:title, :subtitle, :body))
         format.html { redirect_to myworks_path, notice: 'The portfolio item was successfully updated.' }
@@ -33,5 +33,9 @@ class MyworksController < ApplicationController
         format.html { render :edit }
       end
     end
+  end
+
+  def show
+    @portfolio_item = Mywork.find(params[:id])
   end
 end
