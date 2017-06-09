@@ -38,4 +38,14 @@ class MyworksController < ApplicationController
   def show
     @portfolio_item = Mywork.find(params[:id])
   end
+
+  def destroy
+    @portfolio_item = Mywork.find(params[:id])
+
+    @portfolio_item.destroy
+    respond_to do |format|
+      format.html { redirect_to myworks_url, notice: 'The portfolio item was successfully destroyed.' }
+      format.json { head :no_content }
+    end
+  end
 end
