@@ -1,11 +1,18 @@
 Rails.application.routes.draw do
-  resources :myworks
-  get 'pages/home'
+  resources :myworks, except: [:show]
 
-  get 'pages/about'
+  get 'mywork/:id', to: 'myworks#show', as: 'mywork_show'
 
-  get 'pages/contact'
+  get 'about', to: 'pages#about'
 
-  resources :blogs
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  get 'contact', to: 'pages#contact'
+
+  resources :blogs do
+    member do
+      get :toggle_status
+    end  
+  end    
+
+  root to: 'pages#home'
+
 end
