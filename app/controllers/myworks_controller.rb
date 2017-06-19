@@ -3,6 +3,10 @@ class MyworksController < ApplicationController
     @portfolio_item = Mywork.all
   end  
 
+  def angular
+    @angular_portfolio_item = Mywork.angular
+  end  
+
   def new
     @portfolio_item = Mywork.new 
   end
