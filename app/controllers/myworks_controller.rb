@@ -9,10 +9,11 @@ class MyworksController < ApplicationController
 
   def new
     @portfolio_item = Mywork.new 
+    3.times { @portfolio_item.technologies.build }
   end
 
   def create
-    @portfolio_item = Mywork.new(params.require(:mywork).permit(:title, :subtitle, :body))
+    @portfolio_item = Mywork.new(params.require(:mywork).permit(:title, :subtitle, :body, technologies_attributes: [:name]))
 
     respond_to do |format|
       if @portfolio_item.save
