@@ -13,7 +13,7 @@ class MyworksController < ApplicationController
   end
 
   def create
-    @portfolio_item = Mywork.new(params.require(:mywork).permit(:title, :subtitle, :body, technologies_attributes: [:name]))
+    @portfolio_item = Mywork.new(mywork_params)
 
     respond_to do |format|
       if @portfolio_item.save
@@ -32,7 +32,7 @@ class MyworksController < ApplicationController
     @portfolio_item = Mywork.find(params[:id])
 
     respond_to do |format|
-      if @portfolio_item.update(params.require(:mywork).permit(:title, :subtitle, :body))
+      if @portfolio_item.update(mywork_params)
         format.html { redirect_to myworks_path, notice: 'The portfolio item was successfully updated.' }
       else
         format.html { render :edit }
@@ -52,5 +52,14 @@ class MyworksController < ApplicationController
       format.html { redirect_to myworks_url, notice: 'The portfolio item was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  private
+  def mywork_params
+    params.require(:mywork).permit(:title, 
+                                   :subtitle, 
+                                   :body, 
+                                   technologies_attributes: [:name]
+                                   )
   end
 end
