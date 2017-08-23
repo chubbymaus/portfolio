@@ -12,6 +12,8 @@
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
 
+    <%= render "shared/nav" %>
+
     <h4><% if current_user.is_a?(User) %>
       <%= link_to "Logout", destroy_user_session_path, method: :delete %>
     <% else %>
@@ -21,13 +23,6 @@
 
     <%= yield %>
 
-    <div>
-      <div><%= link_to "Home", root_path %></div>
-      <div><%= link_to "About", about_path %></div>
-      <div><%= link_to "Contact", contact_path %></div>
-      <div><%= link_to "Blog", blogs_path %></div>
-      <div><%= link_to "Portfolio", myworks_path %></div>
-    </div>
 
     <% if session[:source] %>
     <p>Thanks for visiting me from  <%= session[:source] %></p>
