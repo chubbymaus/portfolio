@@ -28,6 +28,7 @@ class MyworksController < ApplicationController
 
   def edit
     @portfolio_item = Mywork.find(params[:id])
+    
   end
 
   def update

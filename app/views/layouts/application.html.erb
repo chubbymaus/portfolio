@@ -11,8 +11,8 @@
   <body>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-    
-    <%= render "shared/nav" %>
+
+    <%= render "shared/nav", location: 'top' %>
 
     <h4><% if current_user.is_a?(User) %>
       <%= link_to "Logout", destroy_user_session_path, method: :delete %>
