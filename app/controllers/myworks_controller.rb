@@ -2,7 +2,7 @@ class MyworksController < ApplicationController
   layout "myworks"
   
   def index
-    @portfolio_item = Mywork.all
+    @portfolio_items = Mywork.all
   end  
 
   def angular
