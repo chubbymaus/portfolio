@@ -1,4 +1,5 @@
 class MyworksController < ApplicationController
+  before_action :set_portfolio_item, only: [:edit, :update, :show, :destroy]
   layout "myworks"
   
   def index
@@ -27,12 +28,11 @@ class MyworksController < ApplicationController
   end
 
   def edit
-    @portfolio_item = Mywork.find(params[:id])
     
   end
 
   def update
-    @portfolio_item = Mywork.find(params[:id])
+    
 
     respond_to do |format|
       if @portfolio_item.update(mywork_params)
@@ -44,11 +44,10 @@ class MyworksController < ApplicationController
   end
 
   def show
-    @portfolio_item = Mywork.find(params[:id])
   end
 
   def destroy
-    @portfolio_item = Mywork.find(params[:id])
+    
 
     @portfolio_item.destroy
     respond_to do |format|
@@ -65,4 +64,7 @@ class MyworksController < ApplicationController
                                    technologies_attributes: [:name]
                                    )
   end
+  def set_portfolio_item
+    @portfolio_item = Mywork.find(params[:id])
+  end  
 end
