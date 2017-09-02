@@ -67,6 +67,8 @@ GEM
     erubi (1.6.0)
     execjs (2.7.0)
     ffi (1.9.18)
+    font-awesome-sass (4.7.0)
+      sass (>= 3.2)
     friendly_id (5.1.0)
       activerecord (>= 4.0.0)
     globalid (0.4.0)
@@ -194,6 +196,7 @@ DEPENDENCIES
   byebug
   coffee-rails (~> 4.2)
   devise (~> 4.3)
+  font-awesome-sass
   friendly_id (~> 5.1.0)
   inferno_view_tool (~> 0.1.0)
   jbuilder (~> 2.5)
