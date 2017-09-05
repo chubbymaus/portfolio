@@ -1,5 +1,4 @@
 @import "bootstrap";
-@import "font-awesome-sprockets";
 @import "font-awesome";
 
 /*
@@ -171,3 +170,10 @@ h6, .h6 {
 .btn{
   border-radius: 0;
 }
+
+/*
+ * social-links
+ */
+ .social-links{
+  font-size: 1.75em;
+ }
