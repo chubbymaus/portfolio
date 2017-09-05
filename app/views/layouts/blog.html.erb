@@ -17,6 +17,7 @@
       <div class="container">
         <h1 class="blog-title">The Bootstrap Blog</h1>
         <p class="lead blog-description">An example blog template built with Bootstrap.</p>
+        <%= link_to 'Create A New Post', new_blog_path if logged_in?(:site_admin) %>
       </div>
     </div>
   <!-- end of blog-header -->
@@ -63,7 +64,7 @@
           </div>
         </div><!-- /.blog-sidebar -->
       <!-- end sidebar -->  
-
+    </div>
       <!-- start footer -->
         <footer class="blog-footer">
           <p>Blog template built for <a href="https://getbootstrap.com">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>
@@ -73,12 +74,12 @@
         </footer>
       <!-- end footer -->
 
-    <%= render "shared/nav", location: 'bottom' %>
+
 
     <%= source_helper("blog") %>
 
   <!-- end of container and row element -->
-      </div>
+      
     </div>
   <!-- end of container and row element -->  
   </body>
