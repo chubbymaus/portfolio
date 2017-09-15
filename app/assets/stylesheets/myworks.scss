@@ -7,7 +7,12 @@ body {
 .navbar {
   margin-bottom: 0;
 }
-
+.navbar-dark .navbar-nav .nav-link{
+  color: white;
+}
+.navbar-dark .navbar-toggler{
+  border: none;
+}
 .jumbotron {
   padding-top: 6rem;
   padding-bottom: 6rem;
