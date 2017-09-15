@@ -7,9 +7,13 @@ body {
 .navbar {
   margin-bottom: 0;
 }
-.navbar-dark .navbar-nav .nav-link{
+.navbar-dark .navbar-nav .nav-link {
+  color: #c1c1c1;
+}
+.navbar-dark .navbar-nav .nav-link .active{
   color: white;
 }
+
 .navbar-dark .navbar-toggler{
   border: none;
 }
@@ -66,4 +70,10 @@ footer p {
 
 .btn{
   border-radius: 0;
+}
+.form-control{
+  border-radius:0;
+}
+.portfolio-form{
+  margin-top: 8rem;
 }

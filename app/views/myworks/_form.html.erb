@@ -1,43 +1,45 @@
 
-<%= form_with(model: @portfolio_item, local: true) do |form| %>
-<div class='row'>
-  <div class='col-md-6'>
-    <div class="form-group">
-      <%= form.label :title %>
-      <%= form.text_field :title, id: :portfolio_item_title, class: 'form-control' %>
-    </div>
 
-    <div class="form-group">
-      <%= form.label :subtitle %>
-      <%= form.text_field :subtitle, id: :portfolio_item_subtitle, class: 'form-control' %>
-    </div>
+  <%= form_with(model: @portfolio_item, local: true) do |form| %>
+  <div class='row'>
+    <div class='col-md-6'>
+      <div class="form-group">
+        <%= form.label :title %>
+        <%= form.text_field :title, id: :portfolio_item_title, class: 'form-control' %>
+      </div>
+
+      <div class="form-group">
+        <%= form.label :subtitle %>
+        <%= form.text_field :subtitle, id: :portfolio_item_subtitle, class: 'form-control' %>
+      </div>
+    </div>  
+    <div class='col-md-6'>
+      <div class="form-group">
+        <%= form.label :body %>
+        <%= form.text_area :body, id: :portfolio_item_body, class: 'form-control', rows: 12 %>
+      </div>
+    </div>  
+
   </div>  
-  <div class='col-md-6'>
-    <div class="form-group">
-      <%= form.label :body %>
-      <%= form.text_area :body, id: :portfolio_item_body, class: 'form-control', rows: 12 %>
-    </div>
-  </div>  
-
-</div>  
 
 
-<div class='row'>
-  <div class='col-md-12'>
-    <hr>
-    <h3>Technologies Used</h3>
-    <div>
-      <%= form.fields_for :technologies do |technology_form| %>
-        <div class="form-group">
-          <%= technology_form.label :name %>
-          <%= technology_form.text_field :name, class: 'form-control' %>
-        </div>
-      <% end %>  
-    </div>
+  <div class='row'>
+    <div class='col-md-12'>
+      <hr>
+      <h3>Technologies Used</h3>
+      <div>
+        <%= form.fields_for :technologies do |technology_form| %>
+          <div class="form-group">
+            <%= technology_form.label :name %>
+            <%= technology_form.text_field :name, class: 'form-control' %>
+          </div>
+        <% end %>  
+      </div>
 
-    <div class="form-group">
-      <%= form.submit 'Submit', class: 'btn btn-primary btn-block' %>
+      <div class="form-group">
+        <%= form.submit 'Submit', class: 'btn btn-primary btn-block' %>
+      </div>
     </div>
   </div>
-</div>
-<% end %>
+  <% end %>
+  
