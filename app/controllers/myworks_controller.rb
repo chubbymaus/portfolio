@@ -6,6 +6,14 @@ class MyworksController < ApplicationController
     @portfolio_items = Mywork.by_position
   end  
 
+  def sort
+    params[:order].each do |key, value|
+      Mywork.find(value[:id]).update(position: value[:position])
+    end
+
+    render nothing: true
+  end
+
   def angular
     @angular_portfolio_item = Mywork.angular
   end  
