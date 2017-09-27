@@ -69,6 +69,8 @@ class MyworksController < ApplicationController
     params.require(:mywork).permit(:title, 
                                    :subtitle, 
                                    :body, 
+                                   :main_image,
+                                   :thumb_image,
                                    technologies_attributes: [:name]
                                    )
   end

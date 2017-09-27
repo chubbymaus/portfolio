@@ -76,6 +76,11 @@ footer p {
 .form-control{
   border-radius:0;
 }
-.portfolio-form{
-  margin-top: 8rem;
+
+.portfolio-container{
+  padding: 40px;
+}
+#main-image{
+  max-height: 450px;
+  max-width: 85%;
 }
