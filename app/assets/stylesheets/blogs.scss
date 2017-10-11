@@ -157,5 +157,15 @@ h6, .h6 {
   font-size: 1.75em;
  }
 
+.tech-news{
+  color: #222;
+  margin: 10px 0px;
+}
+.tech-news a{
+  color: #007bff;
+}
 
+.tech-news > .card {
+  padding: 10px;
+}
 
