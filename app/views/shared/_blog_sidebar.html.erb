@@ -18,9 +18,12 @@
             </div>
             <h3>Tech News</h3>
             <hr>
+
             <% @tweets.each do |tweet| %>
-              <div class="card">
-              <%= twitter_parser tweet %>
+              <div class="tech-news">
+                <div class="card">
+                <%= twitter_parser tweet %>
+                </div>  
               </div>  
              <% end %> 
           </div>

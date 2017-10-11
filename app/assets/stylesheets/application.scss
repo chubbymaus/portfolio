@@ -159,7 +159,7 @@ body {
   .masthead,
   .mastfoot,
   .cover-container {
-    width: 55rem;
+    width: 65rem;
   }
 }
 /*
@@ -200,4 +200,16 @@ body {
   transform: translateX(-50%) translateY(-50%);
   background: image-url('home_bg.png') no-repeat;
   background-size: cover;
+}
+
+.tech-news{
+  color: #222;
+  margin: 20px;
+}
+.tech-news a{
+  color: #007bff;
+}
+
+.tech-news > .card {
+  padding: 30px;
 }
