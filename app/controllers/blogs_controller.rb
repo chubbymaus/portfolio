@@ -7,6 +7,7 @@ class BlogsController < ApplicationController
   def index
     @blogs = Blog.page(params[:page]).per(5)
     @page_title = "Court Garr | Code & Design Blog"
+    @tweets = SocialTool.twitter_search
   end
 
   # GET /blogs/1
