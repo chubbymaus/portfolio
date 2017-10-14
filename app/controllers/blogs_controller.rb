@@ -13,15 +13,9 @@ class BlogsController < ApplicationController
   # GET /blogs/1
   # GET /blogs/1.json
   def show
-    @blog = Blog.includes(:comments).friendly.find(params[:id])
-    @comment = Comment.new
     @page_title = @blog.title + " | Court Garr"
     @seo_keywords = @blog.body
     @tweets = SocialTool.twitter_search
-<<<<<<< HEAD
-=======
-
->>>>>>> 6552d08d1ce105b333fb56d053a8572aac3d359e
   end
 
   # GET /blogs/new
