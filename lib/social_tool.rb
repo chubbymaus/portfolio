@@ -7,8 +7,8 @@ module SocialTool
       config.access_token_secret = ENV.fetch("TWITTER_ACCESS_SECRET")
     end
 
-    client.search("#rails", result_type: 'recent').take(6).collect do |tweet|
-      "#{tweet.user.screen_name}: #{tweet.text}"
+    client.user_timeline("techcrunch", result_type: 'recent').take(6).collect do |tweet|
+      "@#{tweet.user.screen_name}:<br> #{tweet.text}".html_safe
     end  
   end  
 end  
