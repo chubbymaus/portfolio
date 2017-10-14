@@ -15,15 +15,18 @@ class BlogsController < ApplicationController
   def show
     @page_title = @blog.title + " | Court Garr"
     @seo_keywords = @blog.body
+    @tweets = SocialTool.twitter_search
   end
 
   # GET /blogs/new
   def new
     @blog = Blog.new
+    @tweets = SocialTool.twitter_search
   end
 
   # GET /blogs/1/edit
   def edit
+    @tweets = SocialTool.twitter_search
   end
 
   # POST /blogs
