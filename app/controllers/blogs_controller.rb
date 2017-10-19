@@ -35,6 +35,7 @@ class BlogsController < ApplicationController
   # POST /blogs.json
   def create
     @blog = Blog.new(blog_params)
+    @tweets = SocialTool.twitter_search
 
     respond_to do |format|
       if @blog.save
