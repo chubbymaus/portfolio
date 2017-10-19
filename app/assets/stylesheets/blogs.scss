@@ -138,6 +138,7 @@ h6, .h6 {
  */
 
 .blog-footer {
+  margin-top: 20px;
   padding: 2.5rem 0;
   color: #999;
   text-align: center;
@@ -169,4 +170,19 @@ h6, .h6 {
 .tech-news > .card {
   padding: 10px;
 }
+.card{
+  border-radius: 0px;
+}
+a:hover{
+  text-decoration: none;
+}
 
+.comment-card > .card{
+  margin-top: 15px;
+  padding:20px;
+}
+
+.comment-attribution{
+  font-size: .8em;
+  color: $blue;
+}
