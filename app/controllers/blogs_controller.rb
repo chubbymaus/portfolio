@@ -18,10 +18,6 @@ class BlogsController < ApplicationController
     @page_title = @blog.title + " | Court Garr"
     @seo_keywords = @blog.body
     @tweets = SocialTool.twitter_search
-<<<<<<< HEAD
-=======
-
->>>>>>> 6552d08d1ce105b333fb56d053a8572aac3d359e
   end
 
   # GET /blogs/new
@@ -39,6 +35,7 @@ class BlogsController < ApplicationController
   # POST /blogs.json
   def create
     @blog = Blog.new(blog_params)
+    @tweets = SocialTool.twitter_search
 
     respond_to do |format|
       if @blog.save
