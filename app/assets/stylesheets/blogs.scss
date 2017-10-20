@@ -1,3 +1,5 @@
+$blue: #2A628F;
+$gray-800: #2C302E;
 
 @import "bootstrap";
 @import "font-awesome";
@@ -8,7 +10,7 @@
 
 
 body {
-  margin-top: 6rem;
+  margin-top: 66px;
 }
 
 
@@ -58,6 +60,9 @@ h6, .h6 {
 .navbar-dark .navbar-toggler{
   border: none;
 }
+.navbar-brand{
+  margin-top: 3px;
+}
 
 
 /*
@@ -68,6 +73,7 @@ h6, .h6 {
   padding-bottom: 1.25rem;
   margin-bottom: 2rem;
   border-bottom: .05rem solid #eee;
+  margin-top: 100px;
 }
 .blog-title {
   margin-bottom: 0;
@@ -189,3 +195,33 @@ a:hover{
 .blog-sidebar{
   margin-top: 15px;
 }
+.form-control{
+  border-radius: 0px;
+}
+.blog-post-title a{
+  color: $gray-800;
+}
+#background {
+
+  background: image-url('backgroundhaus.png') no-repeat;
+   -webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+height: 640px;
+  padding-top:6%;
+
+
+}
+#header-content{
+  margin-top: 150px;
+  color: #f3f3f3;
+}
+#header-content h1, #header-content h3 {
+  color: #f3f3f3;
+}
+.home-buttons{
+  margin: 25px;
+
+}
+

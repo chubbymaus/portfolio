@@ -7,6 +7,7 @@
     <%= csrf_meta_tags %>
     <meta name="keywords" content = "<%= @seo_keywords %>" />
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
@@ -14,23 +15,19 @@
     <div class="site-wrapper">
       <div class="site-wrapper-inner">
         <div class="cover-container">
-          <%= render "shared/application_nav" %>
-            
-          <%= video_tag(
-            'HardDrive.mp4',
-            id: 'background',
-            autoplay: true,
-            loop: true,
-            muted: true,
-            poster: 'home_bg.png'
-            )
-           %>
+          <%= render "shared/portfolio_nav" %>
+          
+          
+
+
+ 
           <%= yield %>
 
           <%= source_helper("application") %>
 
           <%= alerts %> 
-          <%= render "shared/application_footer" %>
+
+          <%= render "shared/blog_footer" %>
         </div>
       </div>
     </div> 

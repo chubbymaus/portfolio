@@ -1,122 +1,141 @@
+$blue: #2A628F;
+$gray-800: #2C302E;
+
 @import "bootstrap";
 @import "font-awesome";
 @import "gritter";
-
 /*
  * Globals
  */
 
-/* Links */
-a,
-a:focus,
-a:hover {
-  color: #fff;
+
+body {
+  margin-top: 66px;
 }
 
-/* Custom default button */
-.btn-secondary,
-.btn-secondary:hover,
-.btn-secondary:focus {
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: normal;
   color: #333;
-  text-shadow: none; /* Prevent inheritance from `body` */
-  background-color: #fff;
-  border: .05rem solid #fff;
-}
-.btn{
-  border-radius: 0;
-}
-
-/*
- * Base structure
- */
-
-html,
-body {
-  height: 100%;
-}
-body {
-  color: #fff;
-  text-align: center;
-}
-
-/* Extra markup and styles for table-esque vertical and horizontal centering */
-.site-wrapper {
-  display: table;
-  width: 100%;
-  height: 100%; /* For at least Firefox */
-  min-height: 100%;
-  -webkit-box-shadow: inset 0 0 5rem rgba(0,0,0,.5);
-          box-shadow: inset 0 0 5rem rgba(0,0,0,.5);
-}
-.site-wrapper-inner {
-  display: table-cell;
-  vertical-align: top;
-}
-.cover-container {
-  margin-right: auto;
-  margin-left: auto;
-}
-
-/* Padding for spacing */
-.inner {
-  padding: 2rem;
 }
 
 
 /*
- * Header
+ * Override Bootstrap's default container.
  */
 
-.masthead {
+.container {
+  max-width: 60rem;
+}
+
+
+/*
+ * Masthead for nav
+ */
+
+.blog-masthead {
+  margin-bottom: 3rem;
+  background-color: #428bca;
+  -webkit-box-shadow: inset 0 -.1rem .25rem rgba(0,0,0,.1);
+          box-shadow: inset 0 -.1rem .25rem rgba(0,0,0,.1);
+}
+
+/* Nav links */
+.navbar {
+  margin-bottom: 0;
+}
+.navbar-dark .navbar-nav .nav-link {
+  color: #c1c1c1;
+}
+.navbar-dark .navbar-nav .nav-link .active{
+  color: white;
+}
+
+.navbar-dark .navbar-toggler{
+  border: none;
+}
+.navbar-brand{
+  margin-top: 3px;
+}
+
+
+/*
+ * Blog name and description
+ */
+
+.blog-header {
+  padding-bottom: 1.25rem;
   margin-bottom: 2rem;
+  border-bottom: .05rem solid #eee;
+  margin-top: 100px;
+}
+.blog-title {
+  margin-bottom: 0;
+  font-size: 2rem;
+  font-weight: normal;
+}
+.blog-description {
+  font-size: 1.1rem;
+  color: #999;
 }
 
-.masthead-brand {
+@media (min-width: 40em) {
+  .blog-title {
+    font-size: 3.5rem;
+  }
+}
+
+
+/*
+ * Main column and sidebar layout
+ */
+
+/* Sidebar modules for boxing content */
+.sidebar-module {
+  padding: 1rem;
+  /*margin: 0 -1rem 1rem;*/
+}
+.sidebar-module-inset {
+  padding: 1rem;
+  background-color: #f5f5f5;
+  border-radius: .25rem;
+}
+.sidebar-module-inset p:last-child,
+.sidebar-module-inset ul:last-child,
+.sidebar-module-inset ol:last-child {
   margin-bottom: 0;
 }
 
-.nav-masthead .nav-link {
-  padding: .25rem 0;
-  font-weight: regular;
-  color: rgba(255,255,255,.5);
-  background-color: transparent;
-  border-bottom: .25rem solid transparent;
-}
 
-.nav-masthead .nav-link:hover,
-.nav-masthead .nav-link:focus {
-  border-bottom-color: rgba(255,255,255,.25);
+/* Pagination */
+.blog-pagination {
+  margin-bottom: 4rem;
 }
-
-.nav-masthead .nav-link + .nav-link {
-  margin-left: 1rem;
-}
-
-.nav-masthead .active {
-  color: #fff;
-  border-bottom-color: #fff;
-}
-
-@media (min-width: 48em) {
-  .masthead-brand {
-    float: left;
-  }
-  .nav-masthead {
-    float: right;
-  }
+.blog-pagination > .btn {
+  border-radius: 2rem;
 }
 
 
 /*
- * Cover
+ * Blog posts
  */
 
-.cover {
-  padding: 0 1.5rem;
+.blog-post {
+  margin-bottom: 4rem;
 }
-.cover .btn-lg {
-  padding: .75rem 1.25rem;
-  font-weight: bold;
+.blog-post-title {
+  margin-bottom: .25rem;
+  font-size: 2.5rem;
+}
+.blog-post-meta {
+  margin-bottom: 1.25rem;
+  color: #999;
 }
 
 
@@ -124,92 +143,108 @@ body {
  * Footer
  */
 
-.mastfoot {
-  color: rgba(255,255,255,.5);
+.blog-footer {
+  padding: 1.5rem 0;
+  color: #999;
+  text-align: center;
+  background-color: #f9f9f9;
+  border-top: .05rem solid #e5e5e5;
 }
-
+.blog-footer p:last-child {
+  margin-bottom: 0;
+}
+.btn{
+  border-radius: 0;
+}
 
 /*
- * Affix and center
+ * social-links
  */
-
-@media (min-width: 40em) {
-  /* Pull out the header and footer */
-  .masthead {
-    position: fixed;
-    top: 0;
-  }
-  .mastfoot {
-    position: fixed;
-    bottom: 0;
-  }
-  /* Start the vertical centering */
-  .site-wrapper-inner {
-    vertical-align: middle;
-  }
-  /* Handle the widths */
-  .masthead,
-  .mastfoot,
-  .cover-container {
-    width: 100%; /* Must be percentage or pixels for horizontal alignment */
-  }
-}
-
-@media (min-width: 62em) {
-  .masthead,
-  .mastfoot,
-  .cover-container {
-    width: 65rem;
-  }
-}
-/*
- * custom styles
- */
- .card-block{
- color: #484848;
- padding: 25px;
- text-align: left;
+ .social-links{
+  font-size: 1.75em;
  }
- 
- .auth-links a{
- color:black;
- }
-
- .login > .card{
-  width: 25rem;
-  margin: 0 auto;
-  float: none;
- }
- .form-control{
- border-radius: 0;
- }
- .app-nav span{
- margin-left: 15px;
- margin-right: 15px;
- }
- #background {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  z-index: -100;
-  -webkit-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%);
-  background: image-url('home_bg.png') no-repeat;
-  background-size: cover;
-}
 
 .tech-news{
   color: #222;
-  margin: 20px;
+  margin: 10px 0px;
 }
 .tech-news a{
-  color: #007bff;
+  color: $blue;
 }
 
 .tech-news > .card {
-  padding: 30px;
+  padding: 10px;
+}
+.card{
+  border-radius: 0px;
+}
+a:hover{
+  text-decoration: none;
+}
+
+.comment-card > .card{
+  margin-top: 15px;
+  padding:20px;
+}
+
+.comment-attribution{
+  font-size: .8em;
+  color: $blue;
+}
+.blog-sidebar{
+  margin-top: 15px;
+}
+.form-control{
+  border-radius: 0px;
+}
+.blog-post-title a{
+  color: $gray-800;
+}
+#background {
+
+  background: image-url('backgroundhaus.png') no-repeat;
+   -webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+height: 640px;
+  padding-top:6%;
+}
+#header-content{
+  margin-top: 150px;
+  color: #f3f3f3;
+}
+#header-content h1, #header-content h3 {
+  color: #f3f3f3;
+}
+.home-buttons{
+  margin: 25px;
+
+}
+#skills{
+  padding: 95px 0;
+  
+}
+#seoul{
+  background: image-url('seoulsmall1.jpg') no-repeat;
+  margin:0px;
+  padding: 100px 0;
+
+  }
+#seoul h2, #seoul h5, #seoul hr{
+  color: #f3f3f3;
+}
+
+#codepic{
+  background: image-url('codepic1.jpg') no-repeat;
+  margin:0px;
+  padding: 100px 0;
+
+  }
+#education{
+  padding-top: 20px;
+}
+#work-experience{
+  padding-top: 25px;
+  min-height: 250px;
 }

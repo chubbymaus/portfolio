@@ -12,12 +12,12 @@
     <% end %>
 
     <p>
-      <%= blog.body %>
+       <%= truncate(blog.body, :length => 250) %>
     </p>
 
     <p class="blog-post-meta">
         
-        <%= link_to 'View Post', blog %>
+        <%= link_to 'View Post', blog, class: 'btn btn-primary btn-block' %>
               
     </p>
 

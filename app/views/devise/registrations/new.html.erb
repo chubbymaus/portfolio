@@ -1,5 +1,5 @@
-<div class="card">
-  <div class="card-block">
+<div class="container">
+
    <div class="row">
     <div class="col-md-7">
           <h2>Sign up</h2>
@@ -37,10 +37,10 @@
     </div> 
     <div class="col-md-5">
           <h4>Already have an account?</h4>
-          <div class= "btn btn-primary btn-block">
-          <%= render "devise/shared/links" %>
+          <div class= "">
+          <%= link_to "Log in", new_session_path(resource_name), class: 'btn btn-primary btn-block'%>
           </div>
     </div>
     </div>
-  </div>
+
 </div>
