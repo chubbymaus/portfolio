@@ -17,9 +17,11 @@
 
 
     <%= yield %>
+ 
 
-    <%= render 'shared/portfolio_footer' %>
-    <%= alerts %>
-    <%= source_helper("application") %>
+
+          <%= alerts %>
+          <%= source_helper("application") %>
+          <%= render 'shared/footer' %>
   </body>
 </html>

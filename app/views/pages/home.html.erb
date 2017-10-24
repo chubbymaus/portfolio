@@ -8,7 +8,7 @@
             <span class='element'></span>
           </h3>
           <p class="home-buttons">
-            <a href="#skills" class= "btn btn-lg btn-primary">Learn More</a>
+            <a href="#skills" class= "btn btn-lg btn-primary">Learn More About Me</a>
             
             <%= link_to "View My Blog", blogs_path, class: 'btn btn-lg btn-secondary' %>
           </p>
@@ -104,3 +104,20 @@
       </div>
  </div>
 </section>
+<script type="text/javascript">
+  
+$(function() {
+  $('a[href*="#"]:not([href="#"])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000);
+        return false;
+      }
+    }
+  });
+});
+</script>
