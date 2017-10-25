@@ -3,14 +3,8 @@
     <h3 class="blog-post-title"><%= link_to blog.title, blog %></h3>
     <p class="blog-post-meta"><%= blog.created_at.strftime("%m.%d.%Y") %> </p>
 
+    <%= render partial: 'blogs/admin_actions', locals: { blog: blog} %>
 
-    <% if logged_in?(:site_admin) %>
-        <p class="blog-post-meta">
-          <%= link_to blog.status, toggle_status_blog_path(blog) %> /
-          <%= link_to 'Edit', edit_blog_path(blog) %> /
-          <%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } %>
-        </p>
-    <% end %>
 
     <p>
        <%= truncate(blog.body, :length => 250) %>
