@@ -1,7 +1,8 @@
   <div class="blog-post">
     
     <h3 class="blog-post-title"><%= link_to blog.title, blog %></h3>
-    <p class="blog-post-meta">Published: <%= distance_of_time_in_words(blog.created_at, Time.now) %> ago</p>
+    <p class="blog-post-meta"><%= blog.created_at.strftime("%m.%d.%Y") %> </p>
+
 
     <% if logged_in?(:site_admin) %>
         <p class="blog-post-meta">
