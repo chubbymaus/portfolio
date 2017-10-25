@@ -1,6 +1,6 @@
 $blue: #2A628F;
 $gray-800: #2C302E;
-
+$red: #e74c3c;
 @import "bootstrap";
 @import "font-awesome";
 @import "gritter";
@@ -238,7 +238,7 @@ height: 640px;
 #codepic{
   background: image-url('codepic1.jpg') no-repeat;
   margin:0px;
-  padding: 100px 0;
+  padding: 50px 45px;
 
   }
 #education{

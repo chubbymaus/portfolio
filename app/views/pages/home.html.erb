@@ -99,8 +99,22 @@
         <p>*Email me for a copy of my resume</p>
         </div>
       </div>   
-      <div class="col-sm-6 text-center" id="codepic">
-       
+      <div class="col-sm-6" id="codepic">
+          <div class='skills-progess'>
+            <% @skills.each do |skill| %>
+              <h4 class="text-light"><%= skill.title %></h4>
+              <div class="progress">
+                <div
+                  class="progress-bar progress-bar-striped bg-danger"
+                  role='progressbar'
+                  aria-valuenow="<%= skill.percent_utilized %>"
+                  aria-valuemax="100"
+                  style='width: <%= skill.percent_utilized %>%;'
+                  >
+                </div>
+              </div>  
+            <% end %>
+          </div>  
       </div>
  </div>
 </section>
