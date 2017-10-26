@@ -19,6 +19,9 @@
         <div>
           <%= link_to 'Edit Item', edit_mywork_path(@portfolio_item), class: 'btn btn-success btn-block' %>
         </div>  
+        <div>
+          <%= link_to 'Delete Item', @portfolio_item, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-block' %>
+        </div> 
       <% end %>
     </div>  
   </div>  

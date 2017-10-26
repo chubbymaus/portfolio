@@ -142,6 +142,13 @@ h6, .h6 {
 /*
  * Footer
  */
+ footer {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+footer p {
+  margin-bottom: 0rem;
+}
 
 .blog-footer {
   margin-top: 20px;
@@ -224,4 +231,20 @@ height: 640px;
   margin: 25px;
 
 }
+.topics-btn{
+  width: 150px;
+  margin: 20px;
+}
+.code {
+    background-color: #f4f4f4;
 
+}
+#sidebar-topics p {
+  margin: 0;
+  padding:0;
+}
+
+.blogcrumb a{
+  font-size: 1.25em;
+  margin: 0px 10px 0px 10px;
+}
