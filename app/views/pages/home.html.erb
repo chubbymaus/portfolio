@@ -17,45 +17,52 @@
     </div>
   </div>
 </div>
-
+<section id="about-me" class='bg-light'>
+  <div class='container'>
+    <div class="col-md-6">
+      <h2>About Me</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>  
+  </div>
+</section>
 <!--info begin -->
-<section id='skills'>
+<section id='skills' class='bg-dark'>
 <div class="container-fluid">
     
       <!--   Icon Section   -->
       <div class="row text-center">
         <div class="col-md-12">
-          <h2>Skills</h2>
-          <hr>
+          <h2 class='text-light'>Skills</h2>
+          
         </br>
         </div>  
 
         <div class="col-md-4">
           <div class="icon-block">
             <h2 class="">
-              <i class="fa fa-code fa-2x text-primary" ></i>
+              <i class="fa fa-code fa-2x text-light" ></i>
             </h2>
-            <h5 class="center">Design</h5>
-            <p class="light center">Graphic design experience with Adobe Photoshop and Illustrator. Comfortable doing web design with HTML, CSS, and Javascript.</p>
+            <h5 class="text-light">Design</h5>
+            <p class="text-light">Graphic design experience with Adobe Photoshop and Illustrator. Comfortable doing web design with HTML, CSS, and Javascript.</p>
           </div>
         </div>
 
         <div class="col-md-4">
           <div class="icon-block">
             <h2 class="">
-              <i class="fa fa-wordpress fa-2x text-primary"></i>
+              <i class="fa fa-wordpress fa-2x text-light"></i>
             </h2>
-            <h5 class="center">Content Management</h5>
-            <p class="light center">Content Management System experience. Ability to build and customize websites built with Wordpress and other CMSs.</p>
+            <h5 class="text-light">Content Management</h5>
+            <p class="text-light">Content Management System experience. Ability to build and customize websites built with Wordpress and other CMSs.</p>
           </div>
         </div>
          <div class="col-md-4">
           <div class="icon-block">
             <h2 class="">
-              <i class="fa fa-briefcase fa-2x text-primary"></i>
+              <i class="fa fa-briefcase fa-2x text-light"></i>
             </h2>
-            <h5 class="center">Marketing &amp; Business Strategy</h5>
-            <p class="light center">Experience doing market research, customer validation, and building marketing/business strategies.</p>
+            <h5 class="text-light">Marketing &amp; Business Strategy</h5>
+            <p class="text-light">Experience doing market research, customer validation, and building marketing/business strategies.</p>
           </div>
         </div>
       </div>
@@ -73,7 +80,7 @@
   </div>
   <div class="col-sm-6 text-center" id='education'>
 
-      <h2> <i class="fa fa-graduation-cap fa-1x text-primary"></i> | BS in Marketing</h2>
+      <h2>BS in Marketing | <i class="fa fa-graduation-cap fa-1x text-primary"></i></h2>
         
         <p class="">SUU Class of 2015</p>
               
@@ -101,11 +108,12 @@
       </div>   
       <div class="col-sm-6" id="codepic">
           <div class='skills-progess'>
+            <h3 class="text-light text-center">Technologies I Frequently Use</h3>
             <% @skills.each do |skill| %>
-              <h4 class="text-light"><%= skill.title %></h4>
+              <h5 class="text-light" id="skill-title"><%= skill.title %></h5>
               <div class="progress">
                 <div
-                  class="progress-bar progress-bar-striped bg-danger"
+                  class="progress-bar progress-bar-striped bg-primary"
                   role='progressbar'
                   aria-valuenow="<%= skill.percent_utilized %>"
                   aria-valuemax="100"
@@ -117,6 +125,65 @@
           </div>  
       </div>
  </div>
+</section>
+<section id='portfolio-promo' class="bg-dark">
+
+  <div class="row text-center text-light">
+    <div class="col-md-12">
+      <h2 class='text-light'>Make sure you checkout my portfolio</h2>
+      <div id='portfolio-btn'>    
+      <%= link_to "View Portfolio", myworks_path, class: 'btn btn-lg btn-danger' %>
+       </div>     
+            
+         
+    </div>
+  </div>    
+</section>  
+<section id='contact'>
+<div class="container">
+    
+      <!--   Icon Section   -->
+      <div class="row text-center text-light">
+        <div class="col-md-12">
+          <h2 class="text-light">Ready to start working together?</h2>
+          <h4 class='text-light'>Call me or shoot me an email anytime.</h4>
+        
+        </br>
+        </div>  
+         <div class="col-md-6 ">
+          <div class="icon-block">
+            <h3 class="text-light">
+              <i class="fa fa-phone fa"></i><a href='tel:801-879-1054' class='text-light'> 801-879-1054</a>
+            </h3>
+
+          </div>
+          <div class="icon-block">
+            <h3 class="text-light">
+              <i class="fa fa-envelope-o fa " ></i> <a href='mailto:court@loftydev.com' class="text-light">court@loftydev.com</a>
+            </h3>
+
+          </div>
+
+        </div>
+        <div class="col-md-6">
+          <div class="icon-block">
+            <h4 class="text-light ">
+              
+              7984 S 1300 E<br>
+              
+            </h4>
+            <h4 class="text-light">
+              Sandy UT 84094
+            </h4>  
+          </div>
+        </div>
+
+
+
+      </div>
+    </div>
+    </div>
+  </div>
 </section>
 <script type="text/javascript">
   

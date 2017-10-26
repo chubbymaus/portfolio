@@ -222,8 +222,12 @@ height: 640px;
 
 }
 #skills{
-  padding: 95px 0;
+  padding: 25px 0;
   
+}
+#about-me{
+  background: image-url('about_me.jpg') no-repeat;
+  padding: 75px;
 }
 #seoul{
   background: image-url('seoulsmall1.jpg') no-repeat;
@@ -238,7 +242,7 @@ height: 640px;
 #codepic{
   background: image-url('codepic1.jpg') no-repeat;
   margin:0px;
-  padding: 50px 45px;
+  padding: 25px 45px;
 
   }
 #education{
@@ -249,9 +253,26 @@ height: 640px;
   min-height: 250px;
 }
 footer {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 footer p {
-  margin-bottom: .25rem;
+  margin-bottom: 0rem;
+}
+.progress{
+  border-radius: 0px;
+  background-color: transparent;
+}
+#skill-title{
+  margin-top: 5px;
+}
+#contact{
+  background: image-url('trax1.jpg') no-repeat;
+  padding: 45px 0;
+}
+#portfolio-promo{
+  padding: 55px 0;
+}
+#portfolio-btn{
+  margin-top: 15px;
 }

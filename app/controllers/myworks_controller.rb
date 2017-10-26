@@ -4,6 +4,7 @@ class MyworksController < ApplicationController
   access all: [:show, :index, :angular], user: {except: [:destroy, :new, :create, :update, :edit, :sort]}, site_admin: :all
   def index
     @portfolio_items = Mywork.by_position
+    
   end  
 
   def sort
