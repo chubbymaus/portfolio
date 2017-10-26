@@ -26,11 +26,7 @@ module ApplicationHelper
         url: root_path,
         title: 'Home'
       },
-      {
 
-        url: about_path,
-        title: 'About Me'
-      },
       {
 
         url: blogs_path,
@@ -43,7 +39,7 @@ module ApplicationHelper
       },
       {
 
-        url: contact_path,
+        url: '#contact',
         title: 'Contact'
       },
 

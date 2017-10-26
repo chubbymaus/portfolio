@@ -4,7 +4,12 @@
             <h4>About</h4>
             <p>Welcome to My Blog! This is were I write about what I'm working on. Sometimes it's graphic design, sometimes it's coding and sometimes it's business dev.</p>
           </div>
-
+          <div class="sidebar-module" id="sidebar-topics">
+            <h4>Topics</h4>  
+            <% @side_bar_topics.each do |topic| %>
+              <p><%= link_to topic.title, topic_path(topic) %> </p>
+            <% end %>
+          </div>  
           <div class="sidebar-module">
             <h4>Follow Me:</h4>
 

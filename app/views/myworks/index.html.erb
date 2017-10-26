@@ -1,7 +1,11 @@
-
+       
 <div class="album text-muted">
   <div class="container">
-
+    <span>
+      <% if logged_in?(:site_admin) %>
+     <%= link_to 'Create A New Post', new_mywork_path, class: 'btn btn-primary btn-block' %>
+     <% end %>
+    </span>
     <div class="row <%= 'sortable' if logged_in?(:site_admin) %>">
       
       <%= render partial: 'portfolio_item', collection: @portfolio_items %>
