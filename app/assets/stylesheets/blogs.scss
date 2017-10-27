@@ -20,11 +20,14 @@ h3, .h3,
 h4, .h4,
 h5, .h5,
 h6, .h6 {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Saira', sans-serif;
   font-weight: normal;
   color: #333;
 }
 
+p, li, .btn, a{
+  font-family: 'Saira', sans-serif;
+}
 
 /*
  * Override Bootstrap's default container.

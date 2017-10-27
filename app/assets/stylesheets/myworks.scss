@@ -8,7 +8,20 @@ $green: #2292A4;
 body {
   margin-top: 4rem;
 }
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  font-family: 'Saira', sans-serif;
+  font-weight: normal;
+  color: #333;
+}
 
+p, li, .btn, a{
+  font-family: 'Saira', sans-serif;
+}
 .navbar {
   margin-bottom: 0;
 }
