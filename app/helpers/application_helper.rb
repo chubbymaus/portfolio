@@ -37,6 +37,11 @@ module ApplicationHelper
         url: myworks_path,
         title: 'Portfolio'
       },
+      {
+
+        url: new_contact_path,
+        title: 'Contact Me'
+      },
 
 
 
