@@ -9,7 +9,7 @@
           </h3>
           <p class="home-buttons">
             <a href="#about-me" class= "btn btn-lg btn-primary">Learn More</a>
-            <a href="#contact" class= "btn btn-lg btn-secondary">Contact Me</a>
+            <%= link_to "View My Blog", blogs_path, class: 'btn btn-lg btn-secondary' %>
             
           </p>
          </div> 
@@ -149,39 +149,8 @@
           <h2 class="text-light">Ready to start working together?</h2>
           <h4 class='text-light'>Call me or shoot me an email anytime.</h4>
         
-        </br>
-        </div>  
-         <div class="col-md-6 ">
-          <div class="icon-block">
-            <h3 class="text-light">
-              <i class="fa fa-phone fa"></i><a href='tel:801-879-1054' class='text-light'> 801-879-1054</a>
-            </h3>
 
-          </div>
-          <div class="icon-block">
-            <h3 class="text-light">
-              <i class="fa fa-envelope-o fa " ></i> <a href='mailto:court@loftydev.com' class="text-light">court@loftydev.com</a>
-            </h3>
-
-          </div>
-
-        </div>
-        <div class="col-md-6">
-          <div class="icon-block">
-            <h4 class="text-light ">
-              
-              7984 S 1300 E<br>
-              
-            </h4>
-            <h4 class="text-light">
-              Sandy UT 84094
-            </h4>  
-          </div>
-        </div>
-
-
-
-      </div>
+       <h3> <%= link_to 'Contact Page <i class="fa fa-arrow-right" aria-hidden="true"></i>'.html_safe, new_contact_path, class: 'text-light' %></h3>
     </div>
     </div>
   </div>
