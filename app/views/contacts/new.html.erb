@@ -1,0 +1,48 @@
+<div id="contact-form">
+  <div class="container">
+    <div class="card">
+            <div class='text-center'>  
+        <h2>Ready to start working together?</h2>
+        <p class='muted'>Call me, text me, or shoot me an email!</p>
+        <hr>
+      </div>  
+      <div class="row">
+
+      <div class="col-sm-6">
+        <div class="icon-block">
+          <h3 class="">
+            <i class="fa fa-phone fa"></i><a href='tel:801-879-1054' class=''>&nbsp;801-879-1054</a>
+          </h3>
+        </div>
+        <div class="icon-block">
+          <h3 class=""><i class="fa fa-map-marker fa"></i>&nbsp;  7984 S 1300 E<br></h3>
+          <h3 class=""> &nbsp; &nbsp;&nbsp; Sandy UT 84094</h3>  
+        </div>
+      </div>
+      <div class="col-sm-6">  
+        <%= form_for @contact do |form| %>
+          <div class="form-group">
+            <%= form.text_field :name, class: 'form-control', placeholder: 'Name' %>
+          </div>
+          <div class="form-group">
+            <%= form.text_field :phone, class: 'form-control', placeholder: 'Phone' %>
+          </div>
+          <div class="form-group">
+            <%= form.email_field :email, class: 'form-control', placeholder: 'Email' %>
+          </div>
+          <div class="form-group">
+            <%= form.text_area :message, class: 'form-control', placeholder: 'Message' %>
+          </div>
+
+          <div class="hidden">
+            <%= form.text_field :nickname, hint: 'leave this field blank' %>
+          </div>
+          <div class="form-group">
+            <%= form.submit 'Send Message', class: 'btn btn-primary btn-block' %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+    </div>
+  </div>
+</div>
