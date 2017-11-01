@@ -26,7 +26,7 @@ h6, .h6 {
   color: #333;
 }
 
-p, li, .btn, a{
+p, li, .btn, a, .card{
   font-family: 'Saira', sans-serif;
 }
 
@@ -181,6 +181,7 @@ p, li, .btn, a{
 }
 .card{
   border-radius: 0px;
+  padding: 30px;
 }
 a:hover{
   text-decoration: none;
@@ -283,4 +284,12 @@ footer p {
 .registration-pages{
   padding: 50px 0;
   height: 83vh;
+}
+.hidden{
+  display: none;
+}
+#contact-form{
+  background: image-url('backgroundhaus.png') no-repeat;
+  min-height: 82.6vh;
+  padding: 90px 0;
 }

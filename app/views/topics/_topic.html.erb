@@ -1,3 +1,8 @@
-<div id=''>
-  <%= link_to topic.title, topic_path(topic), class:'btn btn-primary topics-btn' %>
+
+  <div class="card" data-id="">
+    <%= image_tag "http://via.placeholder.com/350x150", id: 'thumb-image', width: '100%' %>
+    <p class="card-text">
+        <%= link_to topic.title, topic_path(topic), class:'btn btn-primary topics-btn' %>
+    </p>
+
 </div>

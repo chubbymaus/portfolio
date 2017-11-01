@@ -12,9 +12,8 @@ Rails.application.routes.draw do
 
  
 
-  get 'contact', to: 'pages#contact'
 
-
+  resources :contacts, only: [:new, :create]
 
 
   resources :blogs do
